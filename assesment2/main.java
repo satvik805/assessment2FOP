@@ -26,10 +26,10 @@ public class Main
                 case 2:
                     System.out.print("Enter the threshold: ");
                     int threshold = s.nextInt();
-                    manager.Studentbelowthreshold(threshold);
+                    manager.studentbelowthreshold(threshold);
                     break;
                 case 3:
-                    manager.TopandBottomStudents();
+                    manager.topandBottomStudents();
                     break;
                 case 4:
                     s.close();

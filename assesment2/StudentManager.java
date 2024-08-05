@@ -25,7 +25,7 @@ public class StudentManager implements Manage
                   continue; 
                }
                String[] parts = line.split(",");
-               if(parts.length == 7){
+               if(parts.length == 6){
                    String lastName = parts[0].trim();
                    String firstName = parts[1].trim();
                     String studentId = parts[2].trim();
