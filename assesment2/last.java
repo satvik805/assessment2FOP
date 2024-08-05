@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class last
 {
     public static void main(String[] args){
-        StudentManager manager = new StudentManager();
+       StudentManager manager = new StudentManager();
         Scanner s = new Scanner(System.in);
         
         manager.read("file.csv");
