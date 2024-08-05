@@ -9,6 +9,7 @@ public class last
         
         manager.read("file.csv");
         
+        
         while(true){
             System.out.println("\nMenu:");
             System.out.println("1. Print all students");
