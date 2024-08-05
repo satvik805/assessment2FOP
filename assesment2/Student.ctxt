@@ -1,12 +1,16 @@
 #BlueJ class context
 comment0.target=Student
 comment0.text=\n\ Write\ a\ description\ of\ class\ Student\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=StudentId\ name\ marks
-comment1.target=Student(java.lang.String,\ java.lang.String,\ int[])
+comment1.params=StudentId\ Firstname\ a1\ a2\ a3\ Lastname
+comment1.target=Student(java.lang.String,\ java.lang.String,\ double,\ double,\ double,\ java.lang.String)
 comment2.params=
-comment2.target=int\ calculate()
+comment2.target=double\ assignment1Marks()
 comment3.params=
-comment3.target=java.lang.String\ getStudentId()
+comment3.target=double\ assignment2Marks()
 comment4.params=
-comment4.target=int\ getTotalMarks()
-numComments=5
+comment4.target=double\ assignment3Marks()
+comment5.params=
+comment5.target=java.lang.String\ getStudentId()
+comment6.params=
+comment6.target=double\ getTotalMarks()
+numComments=7

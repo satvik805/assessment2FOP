@@ -7,14 +7,21 @@
  */
 public class Person
 {
-   private String name;
+   private String Firstname;
+   private String Lastname;
    
-   public Person(String name){
-       this.name = name;
+   
+   public Person(String Firsatname, String Lastname){
+       this.Firstname = Firstname;
+       this.Lastname = Lastname;
    }
    
-   public String getName(){
-       return name;
+   public String getFirstName(){
+       return Firstname;
+   }
+   
+   public String getLastName(){
+       return Lastname;
    }
    
    
