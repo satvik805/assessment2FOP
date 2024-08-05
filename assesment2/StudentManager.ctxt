@@ -4,13 +4,8 @@ comment1.params=
 comment1.target=StudentManager()
 comment2.params=filename
 comment2.target=void\ read(java.lang.String)
-<<<<<<< HEAD
 comment3.params=mark
 comment3.target=double\ parseDouble(java.lang.String)
-=======
-comment3.params=marks
-comment3.target=double\ parse(java.lang.String)
->>>>>>> bbda0f8676a9e12de525c52f526aa0055a2cf78a
 comment4.params=
 comment4.target=void\ printAllStudents()
 comment5.params=threshold
