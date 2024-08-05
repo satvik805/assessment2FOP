@@ -8,12 +8,13 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 public class StudentManager implements Manage
 {
     // instance variables - replace the example below with your own
-    private ArrayList<Student> students;
-   
+    private List<Student> students;
+    private string unitName;
    public StudentManager(){
        students = new ArrayList<>();
    }
@@ -25,7 +26,7 @@ public class StudentManager implements Manage
            s.nextLine();
            while(s.hasNextLine()){
                String line = s.nextLine();
-               if(line.trim().isEMpty()){
+               if(line.trim().isEmpty()){
                   continue; 
                }
                String[] parts = line.split(",");
@@ -52,7 +53,7 @@ public class StudentManager implements Manage
    public void printAllStudents(){
        System.out.println("Unit: " + unitName);
        for(Student i : students){
-           System.out.println(st);
+           System.out.println(i);
        }
    }
    public void Studentbelowthreshold(int threshold){
