@@ -16,7 +16,12 @@ public class StudentManager implements Manage
    
    @Override
    public void read(String filename){
+<<<<<<< HEAD
        try(Scanner s = new Scanner(new File(filename))){
+=======
+       try{
+           Scanner s = new Scanner(new File(filename));
+>>>>>>> bbda0f8676a9e12de525c52f526aa0055a2cf78a
            s.nextLine();
            s.nextLine();
            while(s.hasNextLine()){
@@ -27,6 +32,7 @@ public class StudentManager implements Manage
                    String lastName = parts[0].trim();
                    String firstName = parts[1].trim();
                     String studentId = parts[2].trim();
+<<<<<<< HEAD
                     double a1 = parseDouble(parts[3].trim());
                     double a2 = parseDouble(parts[4].trim());
                     double a3 = parseDouble(parts[5].trim());
@@ -45,6 +51,23 @@ public class StudentManager implements Manage
                     
                     students.add(new Student(studentId, firstName, sum, 0.0, 0.0, lastName));
                }
+=======
+                    double a1 = parse(parts[3].trim());
+                    double a2 = parse(parts[4].trim());
+                    double a3 = parse(parts[5].trim());
+                    students.add(new Student(studentId, firstName, a1, a2, a3, lastName));
+                    
+                    
+              }else{
+                  String lastName = parts[0].trim();
+                   String firstName = parts[1].trim();
+                    String studentId = parts[2].trim();
+                    int sum = 0;
+                    for(){
+                        
+                    }
+              }
+>>>>>>> bbda0f8676a9e12de525c52f526aa0055a2cf78a
                
            }
            
@@ -53,12 +76,20 @@ public class StudentManager implements Manage
            e.printStackTrace();
        }
    }
+<<<<<<< HEAD
    private double parseDouble(String mark){
        if(mark.isEmpty()){
            return 0.0;
        }else{
            
            return Double.parseDouble(mark);
+=======
+   private double parse(String marks){
+       if(marks.isEmpty()){
+           return 0.0;
+       }else{
+           return Double.parseDouble(marks);
+>>>>>>> bbda0f8676a9e12de525c52f526aa0055a2cf78a
        }
    }
    @Override
