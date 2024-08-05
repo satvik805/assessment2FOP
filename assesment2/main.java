@@ -12,7 +12,7 @@ public class main
         Manage manager = new StudentManager();
         Scanner s = new Scanner(System.in);
         
-        manager.readFile("file.csv");
+        manager.read("file.csv");
         
         while(true){
             System.out.println("\nMenu:");

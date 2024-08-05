@@ -9,6 +9,6 @@ public interface Manage
 {
     void read(String file);
     void printAllStudents();
-    void Studentbelowthreshold();
+    void Studentbelowthreshold(int threshold);
     void TopandBottomStudents();
 }
