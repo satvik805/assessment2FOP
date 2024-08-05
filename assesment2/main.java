@@ -32,7 +32,15 @@ public class main
                     System.out.print("Enter the threshold: ");
                     int threshold = s.nextInt();
                     manager.Studentbelowthreshold();
-                    
+                    break;
+                case 3:
+                    manager.TopBottomStudents();
+                    break;
+                case 4:
+                    s.close();
+                    return;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
             }
         }
     }
