@@ -8,30 +8,36 @@
 public class Student extends Person
 {
     private String StudentId;
-    private int[] marks;
-    private int totalmarks;
+    private double a1;
+    private double a2;
+    private double a3;
     
-    public Student(String StudentId, String name, int[] marks){
-        super(name);
+    public Student(String StudentId, String Firstname, double a1, double a2, double a3, String Lastname){
+        super(Firstname, Lastname);
         this.StudentId = StudentId;
-        this.marks = marks;
-        this.totalmarks = calculate();
+        this.a1 = a1;
+        this.a2 = a2;
+        this.a3 = a3;
     }
     
-    private int calculate(){
-        int total = 0;
-        for(int i : marks){
-            total += i;
-        }
-        return total;
+    public double assignment1Marks(){
+        return a1;
+    }
+    
+    public double assignment2Marks(){
+        return a2;
+    }
+    
+    public double assignment3Marks(){
+        return a3;
     }
     
     public String getStudentId(){
         return this.StudentId;
     }
     
-    public int getTotalMarks(){
-        return totalmarks;
+    public double getTotalMarks(){
+        return a1 + a2 + a3;
     }
     
 }
