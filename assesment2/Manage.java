@@ -1,14 +1,8 @@
 
-/**
- * Write a description of interface Manage here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public interface Manage
 {
     void read(String file);
     void printAllStudents();
-    void Studentbelowthreshold(int threshold);
-    void TopandBottomStudents();
+    void studentbelowthreshold(int threshold);
+    void topandBottomStudents();
 }

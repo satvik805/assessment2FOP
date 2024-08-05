@@ -1,12 +1,7 @@
 
-/**
- * Write a description of class main here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
+
 import java.util.Scanner;
-public class main
+public class Main
 {
     public static void main(String[] args){
         Manage manager = new StudentManager();
@@ -31,10 +26,10 @@ public class main
                 case 2:
                     System.out.print("Enter the threshold: ");
                     int threshold = s.nextInt();
-                    manager.Studentbelowthreshold();
+                    manager.Studentbelowthreshold(threshold);
                     break;
                 case 3:
-                    manager.TopBottomStudents();
+                    manager.TopandBottomStudents();
                     break;
                 case 4:
                     s.close();

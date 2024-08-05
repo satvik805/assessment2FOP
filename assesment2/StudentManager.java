@@ -1,10 +1,5 @@
 
-/**
- * Write a description of class StudentManager here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -14,7 +9,7 @@ public class StudentManager implements Manage
 {
     // instance variables - replace the example below with your own
     private List<Student> students;
-    private string unitName;
+    private String unitName;
    public StudentManager(){
        students = new ArrayList<>();
    }
@@ -56,15 +51,17 @@ public class StudentManager implements Manage
            System.out.println(i);
        }
    }
-   public void Studentbelowthreshold(int threshold){
+   
+   @Override
+   public void studentbelowthreshold(int threshold){
        for(Student st : students){
            if(st.getTotalMarks() < threshold){
-               System.out.println(student);
+               System.out.println(st);
            }
        }
    }
    @Override
-   public void TopandBottomStudents(){
+   public void topandBottomStudents(){
        sortStudents();
        System.out.println("Top 5 students: ");
        for(int i = 0; i < 5 && i < students.size(); i++){
