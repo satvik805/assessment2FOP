@@ -17,14 +17,19 @@ public class StudentManager implements Manage
    @Override
    public void read(String filename){
        try(Scanner s = new Scanner(new File(filename))){
-           unitName = s.nextLine().trim();
+           String unitLine = s.nextLine();
+           if(unitLine.startsWith("Unit: ")){
+               unitName = s.nextLine().trim();
+           }else{
+               throw new IllegalArgumentException("Invalid unit line format");
+           }
            s.nextLine();
            while(s.hasNextLine()){
                String line = s.nextLine();
                if(line.trim().isEmpty()){
                   continue; 
                }
-               String[] parts = line.split(",");
+               String[] parts = line.split("\t");
                if(parts.length == 6){
                    String lastName = parts[0].trim();
                    String firstName = parts[1].trim();
