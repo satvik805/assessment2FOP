@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Person
 comment0.text=\n\ Write\ a\ description\ of\ class\ Person\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=Firsatname\ Lastname\ StudentId
-comment1.target=Person(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.params=Firsatname\ Lastname
+comment1.target=Person(java.lang.String,\ java.lang.String)
 comment2.params=
 comment2.target=java.lang.String\ getFirstName()
 comment3.params=
