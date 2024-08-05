@@ -17,24 +17,33 @@ public class StudentManager implements Manage
    @Override
    public void read(String filename){
        try(Scanner s = new Scanner(new File(filename))){
-           unitName = s.nextLine().trim();
+           s.nextLine();
            s.nextLine();
            while(s.hasNextLine()){
                String line = s.nextLine();
-               if(line.trim().isEmpty()){
-                  continue; 
-               }
+               
                String[] parts = line.split(",");
                if(parts.length == 6){
                    String lastName = parts[0].trim();
                    String firstName = parts[1].trim();
                     String studentId = parts[2].trim();
-                    double a1 = Double.parseDouble(parts[3].trim());
-                    double a2 = Double.parseDouble(parts[4].trim());
-                    double a3 = Double.parseDouble(parts[5].trim());
+                    double a1 = parseDouble(parts[3].trim());
+                    double a2 = parseDouble(parts[4].trim());
+                    double a3 = parseDouble(parts[5].trim());
                     students.add(new Student(studentId, firstName, a1, a2, a3, lastName));
                     
                     
+               }
+               else{
+                   String lastName = parts[0].trim();
+                   String firstName = parts[1].trim();
+                    String studentId = parts[2].trim();
+                    int sum = 0;
+                    for(int i = 3; i < parts.length; i ++){
+                        sum += Double.parseDouble(parts[i]);
+                    }
+                    
+                    students.add(new Student(studentId, firstName, sum, 0.0, 0.0, lastName));
                }
                
            }
@@ -44,19 +53,27 @@ public class StudentManager implements Manage
            e.printStackTrace();
        }
    }
+   private double parseDouble(String mark){
+       if(mark.isEmpty()){
+           return 0.0;
+       }else{
+           
+           return Double.parseDouble(mark);
+       }
+   }
    @Override
    public void printAllStudents(){
        System.out.println("Unit: " + unitName);
        for(Student i : students){
-           System.out.println(i);
+           System.out.println(i.getFirstName() + " " + i.getLastName() + " " + i.getTotalMarks() );
        }
    }
    
    @Override
    public void studentbelowthreshold(int threshold){
-       for(Student st : students){
-           if(st.getTotalMarks() < threshold){
-               System.out.println(st);
+       for(Student i : students){
+           if(i.getTotalMarks() < threshold){
+               System.out.println(i.getFirstName() + " " + i.getLastName() + " " + i.getTotalMarks() );
            }
        }
    }
@@ -65,12 +82,12 @@ public class StudentManager implements Manage
        sortStudents();
        System.out.println("Top 5 students: ");
        for(int i = 0; i < 5 && i < students.size(); i++){
-           System.out.println(students.get(i));
+           System.out.println(students.get(i).getFirstName() + " " + students.get(i).getLastName() + " " + students.get(i).getTotalMarks());
        }
        System.out.println("\nBottom 5 students");
        for(int i = students.size() - 5; i < students.size(); i++){
            if(i > 0){
-               System.out.println(students.get(i));
+               System.out.println(students.get(i).getFirstName() + " " + students.get(i).getLastName() + " " + students.get(i).getTotalMarks());
            }
        }
    }
@@ -86,4 +103,5 @@ public class StudentManager implements Manage
            }
        }
    }
+   
 }
