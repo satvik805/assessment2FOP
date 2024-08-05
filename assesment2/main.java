@@ -22,14 +22,17 @@ public class Main
             switch(choice){
                 case 1:
                     manager.printAllStudents();
+                    
                     break;
                 case 2:
                     System.out.print("Enter the threshold: ");
                     int threshold = s.nextInt();
                     manager.studentbelowthreshold(threshold);
+                    
                     break;
                 case 3:
                     manager.topandBottomStudents();
+                    
                     break;
                 case 4:
                     s.close();
