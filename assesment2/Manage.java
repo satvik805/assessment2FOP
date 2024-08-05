@@ -8,7 +8,7 @@
 public interface Manage
 {
     void read(String file);
-    void printStudents();
+    void printAllStudents();
     void Studentbelowthreshold();
     void TopandBottomStudents();
 }
