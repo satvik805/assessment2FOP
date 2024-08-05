@@ -16,37 +16,46 @@ public class StudentManager implements Manage
    
    @Override
    public void read(String filename){
-       try(Scanner s = new Scanner(new File(filename))){
-           String unitLine = s.nextLine();
-           if(unitLine.startsWith("Unit: ")){
-               unitName = s.nextLine().trim();
-           }else{
-               throw new IllegalArgumentException("Invalid unit line format");
-           }
+       try{
+           Scanner s = new Scanner(new File(filename));
+           s.nextLine();
            s.nextLine();
            while(s.hasNextLine()){
                String line = s.nextLine();
-               if(line.trim().isEmpty()){
-                  continue; 
-               }
-               String[] parts = line.split("\t");
+               
+               String[] parts = line.split(",");
                if(parts.length == 6){
                    String lastName = parts[0].trim();
                    String firstName = parts[1].trim();
                     String studentId = parts[2].trim();
-                    double a1 = Double.parseDouble(parts[3].trim());
-                    double a2 = Double.parseDouble(parts[4].trim());
-                    double a3 = Double.parseDouble(parts[5].trim());
+                    double a1 = parse(parts[3].trim());
+                    double a2 = parse(parts[4].trim());
+                    double a3 = parse(parts[5].trim());
                     students.add(new Student(studentId, firstName, a1, a2, a3, lastName));
                     
                     
-               }
+              }else{
+                  String lastName = parts[0].trim();
+                   String firstName = parts[1].trim();
+                    String studentId = parts[2].trim();
+                    int sum = 0;
+                    for(){
+                        
+                    }
+              }
                
            }
            
        }
        catch(FileNotFoundException e){
            e.printStackTrace();
+       }
+   }
+   private double parse(String marks){
+       if(marks.isEmpty()){
+           return 0.0;
+       }else{
+           return Double.parseDouble(marks);
        }
    }
    @Override

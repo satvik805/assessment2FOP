@@ -11,7 +11,7 @@ public class Person
    private String Lastname;
    
    
-   public Person(String Firsatname, String Lastname){
+   public Person(String Firstname, String Lastname){
        this.Firstname = Firstname;
        this.Lastname = Lastname;
    }
